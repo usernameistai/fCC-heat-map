@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    background-color: rgb(143, 222, 236);
+}
+
+svg {
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: cyan;
+}
+#description {
+    margin: 0.25rem;
+}
+#tooltip {
+    margin: 0.5rem auto;
+    visibility: hidden;
+    height: auto;
+    width: 77px;
+    justify-content: space-evenly;
+}
+#legend {
+    height: 50vh;
+}
+/* svg > rect {
+    border-radius: 50%;
+} */
+text {
+    color: #0a0a23;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Map</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <svg id="canvas">
+        <text id="title" x="325" y="25">Monthly Global Land-Surface Temperature</text>
+        <text id="title" x="350" y="50">1753 - 2015: base temperature 8.66℃</text>
+    </svg>
+    <div id="description">This is the description required</div>
+    <div id="tooltip"></div>
+    <svg id="legend">
+        <g>
+            <rect x="10"y="10" width="50" height="50" fill="rgb(69, 117, 180)"></rect>
+            <text x="75" y="40">Variance of -5 or less</text>
+        </g>
+        <g>
+            <rect x="10"y="60" width="50" height="50" fill="rgb(116, 173, 209)"></rect>
+            <text x="75" y="90">Variance of -3 or less</text>
+        </g>
+        <g>
+            <rect x="10"y="110" width="50" height="50" fill="rgb(171, 217, 233)"></rect>
+            <text x="75" y="140">Variance of -1 or less</text>
+        </g>
+        <g>
+            <rect x="10"y="160" width="50" height="50" fill="rgb(224, 243, 248)"></rect>
+            <text x="75" y="190">Variance of 0 or less</text>
+        </g>
+        <g>
+            <rect x="10"y="210" width="50" height="50" fill="rgb(255, 255, 191)"></rect>
+            <text x="75" y="240">Variance of 1 or less</text>
+        </g>
+        <g>
+            <rect x="10"y="260" width="50" height="50" fill="rgb(254, 224, 144)"></rect>
+            <text x="75" y="290">Variance of 2 or less</text>
+        </g>
+        <g>
+            <rect x="10"y="310" width="50" height="50" fill="rgb(253, 174, 97)"></rect>
+            <text x="75" y="340">Variance of 3 or less</text>
+        </g>
+        <g>
+            <rect x="10"y="360" width="50" height="50" fill="rgb(244, 109, 67)"></rect>
+            <text x="75" y="390">Variance of 4 or less</text>
+        </g>
+        <g>
+            <rect x="10"y="410" width="50" height="50" fill="rgb(215, 48, 39)"></rect>
+            <text x="75" y="440">Variance over 4</text>
+        </g>
+        
+    </svg>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
