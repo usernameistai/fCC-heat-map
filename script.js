@@ -102,12 +102,14 @@ let drawCells = () => {
        .attr('y', item => ySc(new Date(0, (item['month'] - 1), 0, 0, 0, 0, 0)))
        .attr('width', () => (w - (2 * pad)) / numY)
        .attr('x', item => xSc(item.year))
-       .on('mouseover', item => {
+       .on('mouseover', (event, item) => {
             tooltip.transition().style('visibility', 'visible');
             tooltip.text(item.year + ' ' + monthsY[item.month - 1] + ' ' + item.variance + ' ' + (baseTemp + item.variance).toFixed(2));
             tooltip.attr('data-year', item.year);
+            tooltip.style('left', (event.pageX + 10) + 'px')
+                   .style('top', (event.pageY - 28) + 'px');
        }) 
-       .on('mouseout', item => tooltip.transition().style('visibility', 'hidden'));                  
+       .on('mouseout', item => tooltip.transition().style('visibility', 'hidden'));                    
 
 }
 

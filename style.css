@@ -26,11 +26,20 @@ svg {
     margin: 0.25rem;
 }
 #tooltip {
-    margin: 0.5rem auto;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem auto;
+    padding: 0.5rem;
     visibility: hidden;
     height: auto;
-    width: 77px;
-    justify-content: space-evenly;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a23;
+    border-radius: 5px;
+    color: whitesmoke;
 }
 #legend {
     height: 50vh;
